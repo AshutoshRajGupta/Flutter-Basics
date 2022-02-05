@@ -1,0 +1,94 @@
+A Text is a widget in Flutter that allows us to display a string of text with a single line in our application. 
+Depending on the layout constraints, we can break the string across multiple lines or might all be displayed on the same line. 
+If we do not specify any styling to the text widget, it will use the closest DefaultTextStyle class style. 
+This class does not have any explicit style.
+
+Example:-
+import 'package:flutter/material.dart';  
+  
+void main() { runApp(MyApp()); }  
+  
+class MyApp extends StatelessWidget {  
+  @override  
+  Widget build(BuildContext context) {  
+    return MaterialApp(  
+        theme: ThemeData(  
+          primarySwatch: Colors.green,  
+        ),  
+        home: MyTextPage()  
+    );  
+  }  
+}  
+class MyTextPage extends StatelessWidget {  
+  @override  
+  Widget build(BuildContext context) {  
+    return Scaffold(  
+      appBar: AppBar(  
+          title:Text("Text Widget Example")  
+      ),  
+      body: Center(  
+          child:Text("Welcome to Javatpoint")  
+      ),  
+    );  
+  }  
+}  
+
+The following are the essential properties of the Text widget used in application:
+
+TextAlign: It is used to specify how our text is aligned horizontally. It also controls the text location.
+
+TextDirection: It is used to determine how textAlign values control the layout of our text. Usually, we write text from left to right, but we can change it using this parameter.
+
+Overflow: It is used to determine when the text will not fit in the available space. It means we have specified more text than the available space.
+
+TextScaleFactor: It is used to determine the scaling to the text displayed by the Text widget. Suppose we have specified the text scale factor as 1.5, then our text will be 50 percent larger than the specified font size.
+
+SoftWrap: It is used to determine whether or not to show all text widget content when there is not enough space available. If it is true, it will show all content. Otherwise, it will not show all content.
+
+MaxLines: It is used to determine the maximum number of lines displayed in the text widget.
+
+Style: It is the most common property of this widget that allows developers to styling their text. It can do styling by specifying the foreground and background color, font size, font weight, letter and word spacing, locale, shadows, etc. See the table to understand it more easily:
+
+Example:-
+import 'package:flutter/material.dart';  
+  
+void main() { runApp(MyApp()); }  
+  
+class MyApp extends StatelessWidget {  
+  @override  
+  Widget build(BuildContext context) {  
+    return MaterialApp(  
+        theme: ThemeData(  
+          primarySwatch: Colors.green,  
+        ),  
+        home: MyTextPage()  
+    );  
+  }  
+}  
+class MyTextPage extends StatelessWidget {  
+  @override  
+  Widget build(BuildContext context) {  
+    return Scaffold(  
+      appBar: AppBar(  
+          title:Text("Text Widget Example")  
+      ),  
+      body: Center(  
+          child:Text(  
+            "Hello World! This is a Text Widget.",  
+            style: TextStyle(  
+              fontSize: 35,  
+              color: Colors.purple,  
+              fontWeight: FontWeight.w700,  
+              fontStyle: FontStyle.italic,  
+              letterSpacing: 8,  
+              wordSpacing: 20,  
+              backgroundColor: Colors.yellow,  
+              shadows: [  
+                Shadow(color: Colors.blueAccent, offset: Offset(2,1), blurRadius:10)  
+              ]  
+            ),  
+          )  
+      ),  
+    );  
+  }  
+} 
