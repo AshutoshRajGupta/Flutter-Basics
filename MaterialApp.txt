@@ -1,9 +1,6 @@
 MaterialApp Class: MaterialApp is a predefined class in a flutter. 
 It is likely the main or core component of flutter. We can access all the other components and widgets provided by Flutter SDK.
- Text widget, Dropdownbutton widget, AppBar widget, Scaffold widget, ListView widget, StatelessWidget, StatefulWidget, IconButton widget, TextField widget, Padding widget, ThemeData widget, etc. 
-are the widgets that can be accessed using MaterialApp class.
-
-
+ Text widget, Dropdownbutton widget, AppBar widget, Scaffold widget, ListView widget, StatelessWidget, StatefulWidget, IconButton widget, TextField widget, Padding widget, ThemeData widget, etc. are the widgets that can be accessed using MaterialApp class.
 
 Basic code for MaterialApp class.
 
