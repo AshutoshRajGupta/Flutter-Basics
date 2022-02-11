@@ -7,7 +7,7 @@ design layout of the application.
 Properties of Scaffold Class: 
  
 1 appBar: It displays a horizontal bar which mainly placed at the top of the Scaffold. 
-appBar uses the widget AppBar which has its own properties like elevation, title, brightness, etc. 
+appBar uses the widget AppBar which has its own properties like elevation, title, brightness, etc.
 
 example of Appbar:-
 
