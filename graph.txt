@@ -1,0 +1,60 @@
+Draw Graph
+It has a widget that draws a line graph for you. A line graph is a sort of chart used to show data that changes over the long haul. We plot line graphs utilizing a few focuses associated with straight lines. We additionally consider it a line graph. The line graph involves two axes known as the ‘X’ axis and ‘Y’ axis. The horizontal axis is known as the x-axis. Would you like to show a graph in your application?. This package can help.
+ It shows multiple axes to plot different data sets on one line graph, and also, we will split all line graph to proper show. It also tracks your work in one line graph. It will be shown on your device.
+
+
+Properties:
+> features: This property is used for a list of features to be shown in the graph.
+> labelX: This property has been used for a list of X-Axis Labels. This will determine and the number of cells to distribute your data in and the width of your cells.
+> labelY: This property is used for a list of Y-Axis Labels. The labels will be distributed on Y-Axis and determine the height of cells.
+> size: This property is used required. This will determine the size of your graph. Height will be size is 50 in the case when the description is shown.
+> showDescription: This property is used for whether to show description at the end of the graph.
+> fontFamily: This property is used for labels and descriptions of features.
+> graphColor: This property is used for the color of your axis and labels.
+
+
+Implementation:
+Step 1: Add the dependencies
+Add dependencies to pubspec — yaml file.
+dependencies:
+  flutter:
+    sdk: flutter
+  draw_graph: ^0.0.2
+
+
+Step 2: Import
+import 'package:draw_graph/draw_graph.dart';
+import 'package:draw_graph/models/feature.dart';
+
+
+Step 3: Run flutter packages get in the root directory of your app.
+How to implement code in dart file :
+You need to implement it in your code respectively:
+Create a new dart file called graph_screen.dart inside the lib folder.
+In the body, we will add LineGraph() Widget. In this widget, we will add features that mean a detailed description of the Feature class below. We will add the size of the x-axis and y-axis. This will determine the size of your graph. We will add labelX means the number of cells to distribute your data according to your cells' width. We will add six data.
+
+
+LineGraph(
+  features: features,
+  size: Size(420, 450),
+  labelX: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6'],
+  labelY: ['25%', '45%', '65%', '75%', '85%', '100%'],
+  showDescription: true,
+  graphColor: Colors.black87,
+),
+
+
+Now, we will add labelY means determine the height of cells. We will add six percent data. We will add showDescription and graphColor.
+We will deeply describe features
+First, we will import the package.
+import 'package:draw_graph/models/feature.dart';
+We will create a list of feature
+final List<Feature> features = [...]
+We will create five features of the line graph. We will add Feature(). Inside, we will add a title, color, and data. Data is distributed in our data and the width of your cells.
+
+
+Feature(
+  title: "Flutter",
+  color: Colors.blue,
+  data: [0.3, 0.6, 0.8, 0.9, 1, 1.2],
+),
