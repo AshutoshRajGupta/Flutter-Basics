@@ -1,0 +1,79 @@
+Flutter is an open-source, cross-platform UI development kit developed by Google. It is gaining popularity these days, as the app made in flutter can run on various devices regardless of their platform. It is majorly used to develop applications for Android and iOS, as a single app made in flutter can work efficiently on both platforms. 
+
+In this article, we will learn how to add images in the flutter app. A flutter app when built has both assets (resources) and code. Assets are available and deployed during runtime. The asset is a file that can include static data, configuration files, icons, and images. The Flutter app supports many image formats, such as JPEG, WebP, PNG, GIF, animated WebP/GIF, BMP, and WBMP.
+ 
+
+Syntax:
+
+Image.asset('image name')
+Steps to Add an Image:
+1. Create a new folder 
+
+It should be in the root of your flutter project. You can name it whatever you want, but assets are preferred.
+If you want to add other assets to your app, like fonts, it is preferred to make another subfolder named images.
+ 
+
+image in flutter app
+
+2. Now you can copy your image to images sub-folder. The path should look like assets/images/yourImage. Before adding images also check the above-mentioned supported image formats.
+
+3. Register the assets folder in pubspec.yaml file and update it. 
+ 
+
+a) To add images, write the following code:
+
+flutter:   
+  assets:
+        - assets/images/yourFirstImage.jpg
+        - assets/image/yourSecondImage.jpg
+b) If you want to include all the images of the assets folder then add this:
+
+flutter:               
+  assets:     
+         - assets/images/
+ 
+
+image in flutter app
+
+Note: Take care of the indentation, assets should be properly indented to avoid any error.
+
+4. Insert the image code in the file, where you want to add the image.
+
+Image.asset('assets/images/GeeksforGeeks.jpg')
+import 'package:flutter/material.dart';  
+    
+void main() => runApp(MyApp());  
+  
+class MyApp extends StatelessWidget {  
+  
+  // This widget is the root 
+  // of your application
+   
+  @override  
+  Widget build(BuildContext context) {  
+   
+    return MaterialApp(  
+        
+      home: Scaffold(  
+        appBar: AppBar(  
+          title: Text('Insert Image Demo'),  
+        ),  
+           
+        body: Center(  
+          child: Column(              
+            children: <Widget>[  
+              Image.asset('assets/images/GeeksforGeeks.jpg'),  
+            ],  
+          ),  
+        ),  
+      ),  
+    );  
+  }  
+}  
+ 
+
+5. Now you can save all the files and run the app, you will find the output as shown below. 
+ 
+
+
+ 
